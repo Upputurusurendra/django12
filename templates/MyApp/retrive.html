@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Retrive</title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="col-md-offset-3 col-md-6">
+    <div class="page-header">
+        <h1><a href="{% url 'home'%}" class="top-menu">Companies list </a></h1>
+    </div>
+    <h3><u>{{instance.company_name}}details</u></h3>
+    <h4>company id:{{instance.id}}</h4><br>
+    <h4>company image:<img src="{{instance.company_logo.url}}"/></h4><br>
+    <h4>company city:{{instance.company_city}}</h4><br>
+</div>
+</body>
+</html>
